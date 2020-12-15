@@ -29,7 +29,81 @@ code {
 }
 /* *****************container css end********************* */
 
-.abex-tour-primary-btn {
+button.abex-tour-primary-btn {
   background-color: #c1aa7f !important;
   color: #fff;
+}
+.abex-tour-nav .nav-item > a {
+  color: inherit;
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 60px;
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
+
+.abex-tour-nav .nav-item.active > .nav-link {
+  background-color: unset !important;
+}
+.abex-tour-footer {
+  background-color: #c1aa7f !important ;
+}
+.abex-tour-footer-subtitle {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.1923076923em;
+  line-height: 1.4;
+  margin-bottom: 0.3076923077em;
+  text-transform: uppercase;
+}
+.abex-tour-footer-link {
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.9285714286rem;
+  line-height: 1.62;
+  font-weight: 400;
+}
+h1.underlined {
+  margin-bottom: 48px;
+}
+h1.underlined::after {
+  background-color: #c1aa7f;
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 15px auto 0;
+  width: 140px;
+}
+.padded-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.why-abex-card {
+  box-shadow: unset !important;
+}
+.why-abex-card {
+  background-color: #fff;
+  height: 100%;
+  margin: 0 auto 1.875rem;
+  max-width: 450px;
+  padding: 0 2rem;
+  text-align: center;
+}
+.abex-tour-card-header {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 1.7142857143rem 0;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+p.sans-serif {
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.why-abex-card .card-body .card-text {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: #000000 !important;
 }

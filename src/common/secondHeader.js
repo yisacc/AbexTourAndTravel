@@ -16,7 +16,7 @@ function SecondNavbarPage() {
       <MDBContainer className="abex-tour-container" fluid>
         <MDBNavbarToggler onClick={toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={state} navbar>
-          <MDBNavbarNav left>
+          <MDBNavbarNav className="abex-tour-nav" left>
             <MDBNavItem active>
               <MDBNavLink to="#!">Destinations</MDBNavLink>
             </MDBNavItem>
