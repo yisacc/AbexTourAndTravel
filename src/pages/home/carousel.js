@@ -30,7 +30,7 @@ const CarouselPage = () => {
                 src={axsum}
                 alt="First slide"
               />
-              <MDBMask overlay="black-light" />
+              <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption className="passport-CarouselCaption">
               <h3 className="abex-tour-primary-heading">
@@ -47,7 +47,7 @@ const CarouselPage = () => {
                 src={lalibela}
                 alt="First slide"
               />
-              <MDBMask overlay="black-light" />
+              <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption className="passport-CarouselCaption">
             <h3 className="abex-tour-primary-heading">
@@ -63,7 +63,7 @@ const CarouselPage = () => {
                 src={sofomer}
                 alt="Second slide"
               />
-              <MDBMask overlay="black-light" />
+              <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption className="passport-CarouselCaption">
               <h3 className="abex-tour-primary-heading">
@@ -79,7 +79,7 @@ const CarouselPage = () => {
                 src={semenMountain}
                 alt="Third slide"
               />
-              <MDBMask overlay="black-light" />
+              <MDBMask overlay="black-slight" />
             </MDBView>
             <MDBCarouselCaption className="passport-CarouselCaption">
               <h3 className="abex-tour-primary-heading">

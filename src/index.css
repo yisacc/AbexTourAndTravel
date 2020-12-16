@@ -18,7 +18,7 @@ code {
 .abex-tour-navigation {
   background-color: rgba(0, 0, 0, 0.8);
   position: -webkit-sticky;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 101;
 }
@@ -106,4 +106,85 @@ p.sans-serif {
   font-size: 1rem !important;
   font-weight: 500 !important;
   color: #000000 !important;
+}
+.equalcard {
+  display: flex;
+  align-items: stretch;
+}
+.equalcard .card {
+  min-width: 100% !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: unset !important;
+}
+.btn-floating {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0;
+  margin: 10px;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+    0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 47px;
+  height: 47px;
+}
+.carousel-multi-item .controls-top .btn-floating {
+  background: #c1aa7f !important;
+}
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  color: #fff;
+  text-align: center;
+}
+.btn-floating i {
+  font-size: 1.25rem;
+  line-height: 47px;
+}
+.controls-top {
+  text-align: center;
+}
+.bg-grey {
+  background: #efefef;
+}
+.controls-top {
+  margin-bottom: 1.88rem;
+}
+.travel-around-container .carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
+}
+.abex-tour-header-dropdown {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.subtitle-one {
+  color: #c1aa7f !important;
+}
+.subtitle-two {
+  color: #ffffff !important;
 }
