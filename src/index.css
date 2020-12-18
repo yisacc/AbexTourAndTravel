@@ -188,3 +188,76 @@ p.sans-serif {
 .subtitle-two {
   color: #ffffff !important;
 }
+.price-from {
+  text-align: center;
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  color: #c1aa7f;
+  letter-spacing: 0.1388888889em;
+  line-height: 1.11;
+}
+.travel-packages-title {
+  margin-top: 0;
+  font-family: 'Miller Display', Georgia, serif;
+  font-weight: 600;
+  margin-bottom: 1.5rem !important;
+  text-align: center !important;
+  line-height: 1.38;
+  font-size: 1.375rem !important;
+  margin: 1.7142857143rem 0;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  height: 60px;
+}
+.travel-packages-description {
+  flex: 0 1 auto;
+  height: 60px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-align: center;
+}
+body {
+  font-family: 'Miller Display', Georgia, serif !important;
+  line-height: 1.7 !important;
+  position: relative;
+  height: 100%;
+}
+.packages-card-body {
+  padding-top: 0 !important;
+}
+.card-button {
+  background-color: #fff;
+  overflow: hidden;
+  padding: 24px;
+  position: relative;
+  text-align: center;
+}
+.t-tag--black {
+  color: #000;
+}
+.t-tag {
+  font-size: 0.9285714286rem;
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1923076923em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.card-button::before {
+  background: #c1aa7f;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+}
+.card-label {
+  display: block;
+  margin: 0 auto 16px;
+  text-align: center;
+}

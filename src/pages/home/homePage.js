@@ -3,6 +3,7 @@ import {MDBContainer} from 'mdbreact';
 import CarouselPage from './carousel';
 import CardExample from './whyAbexCard';
 import MultiCarouselPage from './travelAround';
+import TravelPackages from './travelPackages';
 
 function HomePage(){
     return(
@@ -10,6 +11,7 @@ function HomePage(){
         <CarouselPage />
         <CardExample />
         <MultiCarouselPage />
+        <TravelPackages />
 </>
     )
 }
