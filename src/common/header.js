@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBFormInline,MDBContainer
+MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavbarToggler, MDBCollapse, MDBNavLink,MDBContainer,MDBIcon
 } from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -26,13 +26,28 @@ function NavbarPage(){
           <MDBNavbarNav left>
              </MDBNavbarNav>
           <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBFormInline waves>
-                <div className="md-form my-0">
-                  <input className="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" />
-                </div>
-              </MDBFormInline>
+          <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+            <MDBIcon fab icon="tripadvisor" />
+            </MDBNavLink>
             </MDBNavItem>
+          <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                <MDBIcon fab icon="twitter" />
+              </MDBNavLink>
+
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                <MDBIcon fab icon="facebook" />
+              </MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                <MDBIcon fab icon="telegram" />
+              </MDBNavLink>
+            </MDBNavItem>
+            
           </MDBNavbarNav>
         </MDBCollapse>
         </MDBContainer>
