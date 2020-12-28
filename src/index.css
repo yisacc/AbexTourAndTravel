@@ -402,3 +402,352 @@ body {
 .cta-bespoke-experience.h2 {
   font-weight: 600 !important;
 }
+@media (min-width: 992px) {
+  .example-trip-map .map-wrapper {
+    margin: 0;
+    padding: 0 0.9375rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.example-trip-map .map-wrapper {
+  height: 100%;
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 0;
+}
+.example-trip-map__padding {
+  padding: 80px 120px;
+}
+.tab-content.current {
+  display: inherit;
+  font-family: 'Miller Display', Georgia, serif;
+  line-height: 1.7;
+}
+.form-header + .enquiry-section {
+  margin-top: 2rem;
+}
+.form-enquiry {
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.form-enquiry .form-section {
+  background-color: #efefef;
+  padding: 30px;
+}
+.form-enquiry .form-section strong.form-heading {
+  border-bottom: none;
+  font-family: 'Miller Display', Georgia, serif;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+.form-section .form-heading:first-of-type {
+  margin-top: 0;
+}
+.form-section .form-group {
+  margin-bottom: 1.5rem;
+}
+.form-section .form-group label {
+  font-weight: 400;
+  font-family: 'Circular Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 10px;
+  display: block;
+}
+.form-enquiry ul.tags {
+  list-style: none;
+  margin: 0 0 15px;
+  padding: 0;
+}
+.destinations-wrap {
+  position: relative;
+  height: 60px;
+  border-radius: 2px !important;
+  background-color: #fff;
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-enquiry input[type='text'].icon-location {
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-location.svg);
+}
+input[type='text'].icon {
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+  background-size: 20px;
+  padding-left: 50px;
+}
+.destinations-wrap input[type='text'] {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.destinations-wrap .form-control {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.destinations-wrap input[type='text'].destinations-suggestion {
+  padding-left: 40px;
+  opacity: 0.5;
+  z-index: 0;
+}
+.destinations-wrap-btn {
+  cursor: pointer !important;
+  font-size: 15px;
+  font-size: 0.9375rem !important;
+  height: 41px;
+  letter-spacing: 0;
+  margin-left: 10px !important;
+  padding: 0 1.25rem !important;
+  position: relative;
+  text-transform: none !important;
+  display: inline-block !important;
+  z-index: 2;
+  vertical-align: middle !important;
+}
+.destinations-wrap-btn.btn-primary {
+  background-color: #c1aa7f !important;
+  color: #fff !important;
+}
+.form-enquiry .optional,
+.form-enquiry .required {
+  color: #b2b2b2;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.form-enquiry select,
+.form-enquiry input[type='number'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-arrow-down-black.svg);
+  background-position: right 15px center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  cursor: pointer;
+  min-width: 100px;
+  padding-right: 30px;
+  width: 30%;
+}
+.form-enquiry .form-section select {
+  width: 100%;
+}
+select.form-control {
+  color: #b2b2b2;
+}
+.form-control {
+  height: 60px !important;
+}
+.form-enquiry .form-section + .form-section {
+  margin-top: 30px;
+}
+.form-enquiry textarea.icon {
+  background-position: top 1.5rem left 1rem;
+}
+.form-enquiry select.icon-pencil,
+.form-enquiry textarea.icon-pencil,
+.form-enquiry input[type='email'].icon-pencil,
+.form-enquiry input[type='number'].icon-pencil,
+.form-enquiry input[type='text'].icon-pencil,
+.form-enquiry input[type='tel'].icon-pencil,
+.form-enquiry input[type='url'].icon-pencil,
+.form-enquiry input[type='password'].icon-pencil,
+.form-enquiry input[type='date'].icon-pencil {
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-pencil.svg);
+}
+.form-enquiry select.icon,
+.form-enquiry textarea.icon,
+.form-enquiry input[type='email'].icon,
+.form-enquiry input[type='number'].icon,
+.form-enquiry input[type='text'].icon,
+.form-enquiry input[type='tel'].icon,
+.form-enquiry input[type='url'].icon,
+.form-enquiry input[type='password'].icon,
+.form-enquiry input[type='date'].icon {
+  background-repeat: no-repeat;
+  background-position: center left 1rem;
+  background-size: 20px;
+  padding-left: 50px;
+}
+textarea.form-control {
+  height: auto !important;
+  padding: 15px;
+  resize: none;
+}
+.form-enquiry textarea.icon {
+  background-position: top 1.5rem left 1rem;
+}
+.custom-select {
+  height: unset !important;
+  padding: unset !important;
+}
+.custom-select::before {
+  background: no-repeat center/12px
+    url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-arrow-down-black.svg);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 42.5%;
+  right: 58px;
+  pointer-events: none;
+  width: 15px;
+}
+.form-enquiry select.icon-default {
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-default.svg);
+}
+.intl-tel-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.intl-tel-input.allow-dropdown .flag-container,
+.intl-tel-input.separate-dial-code .flag-container {
+  right: auto;
+  left: 0;
+}
+.intl-tel-input .flag-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1px;
+}
+.intl-tel-input .country-list {
+  position: absolute;
+  z-index: 2;
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  margin: 0 0 0 -1px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-4 .selected-flag {
+  width: 115px;
+}
+.intl-tel-input.separate-dial-code .selected-flag {
+  display: table;
+}
+.intl-tel-input .selected-flag {
+  height: 100%;
+  padding: 0 15px;
+  position: relative;
+  width: 36px;
+  z-index: 1;
+}
+.intl-tel-input .selected-flag .iti-flag {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.iti-flag.et {
+  height: 10px;
+  background-position: -1577px 0;
+}
+.iti-flag {
+  width: 20px;
+  height: 14px;
+  box-shadow: 0 0 1px 0 #888;
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/flags.png);
+  background-repeat: no-repeat;
+}
+.intl-tel-input.separate-dial-code .selected-dial-code {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 28px;
+}
+.intl-tel-input .selected-flag .iti-arrow {
+  background-image: url(
+    data:image/svg + xml;utf8,
+    <svgxmlns='http://www.w3.org/2000/svg'width='12'…ints='1.3 0 5.7 4.4 10 0 11.4 1.3 5.7 7 0 1.3'/></g></g></g></g></g></svg>
+  );
+  border: 0;
+  height: 7px;
+  right: 12px;
+  width: 12px;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+}
+.intl-tel-input .selected-flag::after {
+  border-right: 1px solid #ccc;
+  content: '';
+  height: 60%;
+  position: absolute;
+  top: 20%;
+  right: 0;
+}
+.form-enquiry input[type='checkbox'] {
+  background: #efefef;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+.lg-checkbox input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  right: 9999999px;
+}
+.form-enquiry .consent .consent-text {
+  margin: 0 0 1.5rem;
+}
+.lg-checkbox {
+  margin-left: 2.5rem !important;
+  margin-top: 1rem !important;
+}
+.form-enquiry .consent {
+  margin: 2.5rem 0 0;
+}
+.form-enquiry .consent .consent-text p {
+  color: #474747;
+  display: block;
+  margin: 0;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 2rem;
+  max-width: 350px;
+}
+.lg-checkbox p,
+.lg-checkbox label {
+  position: relative;
+  max-width: none !important;
+}
+.lg-checkbox p:before,
+.lg-checkbox label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -35px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solidÂ #ccc;
+}
+.btn-dark-primary {
+  background-color: #73664c !important;
+  color: #fff !important;
+}
+.btn-lg {
+  font-size: 16px;
+  padding: 20px 30px;
+}

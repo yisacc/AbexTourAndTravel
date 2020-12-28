@@ -1,15 +1,25 @@
 import react from 'react';
 import {MDBContainer} from 'mdbreact';
+import lalibelamap from '../../../images/maps/Capture.PNG';
 
 const ExampleTripMap=()=>{
-
+   const mapStyles = {        
+      height: "100vh",
+      width: "100%"};
+    
+    const defaultCenter = {
+      lat: 41.3851, lng: 2.1734
+    }
 
     return(
         <>
         <MDBContainer fluid>
-        <div class="example-trip-map bg-grey">
-<div class="container-fluid">
-   <div class="row">
+        <div class="example-trip-map bg-grey row">
+        <div class="map-wrapper col-xs-12 col-lg-6">
+   <div class="map">
+   <img src={lalibelamap}></img>
+   </div>
+      </div>
       <div class="col-xs-12 col-lg-6 col-lg-offset-6">
          <div class="example-trip-map__padding">
             <h2>At a glance</h2>
@@ -21,10 +31,9 @@ const ExampleTripMap=()=>{
          </div>
       </div>
    </div>
-</div>
-</div>
 </MDBContainer>
         </>
     )
 }
+
 export default ExampleTripMap;
