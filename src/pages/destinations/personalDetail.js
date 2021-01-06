@@ -1537,7 +1537,7 @@ return(
       <div class="row consent-text lg-checkbox">
          <div class="col-md-12">
             <input type="checkbox" name="consent_processing" class="validate" value="I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip." />
-            <p onclick="$('input[name=\'consent_processing\']').prop('checked', !$('input[name=\'consent_processing\']').prop('checked')).triggerHandler('change');"> I agree to the processing of my personal information across Jacada Travel's global offices, in order to book my trip. <span class="required">(required)</span></p>
+            <p onclick="$('input[name=\'consent_processing\']').prop('checked', !$('input[name=\'consent_processing\']').prop('checked')).triggerHandler('change');"> I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip. <span class="required">(required)</span></p>
             <div class="error-message d-none" id="errorConsent">Please provide consent to allow us to process your enquiry.</div>
          </div>
       </div>
