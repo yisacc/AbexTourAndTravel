@@ -1,17 +1,40 @@
 import { MDBContainer } from 'mdbreact';
-import react from 'react';
+import react, { useEffect,useRef } from 'react';
+import {Link} from 'react-router-dom';
 
 
 const TripItinerary=()=>{
+   const myRefFirst = useRef(null);
+   const myRefSecond = useRef(null);
+   const myRefThird = useRef(null);
+   const myRefFourth = useRef(null);
+   const myRefFifth = useRef(null);
+   const myRefSix = useRef(null);
+   const myRefSeventh = useRef(null);
+const handleMouseEnter=(e)=>{
+   var id = e.currentTarget.id;
+   var element= document.getElementsByClassName(id);
+element[0].classList.add('active');
 
-
+}
+const handleMouseLeave=(e)=>{
+   var id = e.currentTarget.id;
+   var element= document.getElementsByClassName(id);
+element[0].classList.remove('active');
+}
+const executeScrollFirst = () => myRefFirst.current.scrollIntoView();
+const executeScrollSecond = () => myRefSecond.current.scrollIntoView();
+const executeScrollThird = () => myRefThird.current.scrollIntoView();
+const executeScrollFourth = () => myRefFourth.current.scrollIntoView();
+const executeScrollFifth = () => myRefFifth.current.scrollIntoView();
+const executeScrollSixth = () => myRefSix.current.scrollIntoView();
     return(
         <>
 <MDBContainer className="abex-tour-container mt-5 example-trip-itinerary padded-section" fluid>
 <div class="row row-flex-md">
 <div class="col-md-7">
 <h2 class="underlined"> Example trip itinerary</h2>
-<section data-scroll-section="Days 1-2" class="example-trip-section active" id="addis-ababa-0">
+<section ref={myRefFirst} data-scroll-section="Days 1-2" class="example-trip-section" id="addis-ababa-0" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="8.980603" data-lng="38.757761"> <strong>Days 1-2</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Addis Ababa</h3>
@@ -66,7 +89,7 @@ const TripItinerary=()=>{
       </div>
    </div>
 </section>
-<section data-scroll-section="Days 2-4" class="example-trip-section" id="simien-mountains-1">
+<section ref={myRefSecond} data-scroll-section="Days 2-4" class="example-trip-section" id="simien-mountains-1" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="13.306449" data-lng="38.264140"> <strong>Days 2-4</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Simien Mountains</h3>
@@ -130,7 +153,7 @@ const TripItinerary=()=>{
       </div>
    </div>
 </section>
-<section data-scroll-section="Days 4-6" class="example-trip-section" id="lalibela-2">
+<section ref={myRefThird} data-scroll-section="Days 4-6" class="example-trip-section" id="lalibela-2" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="12.030899" data-lng="39.04763"> <strong>Days 4-6</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Lalibela</h3>
@@ -191,7 +214,7 @@ const TripItinerary=()=>{
       </div>
    </div>
 </section>
-<section data-scroll-section="Days 6-8" class="example-trip-section active" id="tigray-region-3">
+<section ref={myRefFourth} data-scroll-section="Days 6-8" class="example-trip-section" id="tigray-region-3" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="14.032334" data-lng="38.316573"> <strong>Days 6-8</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Tigray Region</h3>
@@ -256,7 +279,7 @@ const TripItinerary=()=>{
       </div>
    </div>
 </section>
-<section data-scroll-section="Days 8-11" class="example-trip-section" id="omo-valley-4">
+<section ref={myRefFifth} data-scroll-section="Days 8-11" class="example-trip-section" id="omo-valley-4" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="6.385088" data-lng="37.007425"> <strong>Days 8-11</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Omo Valley</h3>
@@ -294,7 +317,7 @@ const TripItinerary=()=>{
       </div>
    </div>
 </section>
-<section data-scroll-section="Day 11" class="example-trip-section" id="addis-ababa-5">
+<section ref={myRefSix} data-scroll-section="Day 11" class="example-trip-section" id="addis-ababa-5" onMouseEnter={(e)=>handleMouseEnter(e)} onMouseLeave={(e)=>{handleMouseLeave(e)}}>
    <div class="information-break" data-lat="8.980603" data-lng="38.757761"> <strong>Day 11</strong></div>
    <div class="information-break__content">
       <h3 class="information-break__title"> Addis Ababa</h3>
@@ -344,14 +367,14 @@ const TripItinerary=()=>{
    </div>
 </div>
 <div class="floating-navigation">
-   <div class="location active">
-   <a href="#addis-ababa-0"> <strong>Days 1-2:</strong> Addis Ababa </a>
+   <div class="location addis-ababa-0">
+   <Link onClick={executeScrollFirst}> <strong>Days 1-2:</strong> Addis Ababa </Link>
    </div>
-   <div class="location"> <a href="#simien-mountains-1"> <strong>Days 2-4:</strong> Simien Mountains </a></div>
-   <div class="location"> <a href="#lalibela-2"> <strong>Days 4-6:</strong> Lalibela </a></div>
-   <div class="location"> <a href="#tigray-region-3"> <strong>Days 6-8:</strong> Tigray Region </a></div>
-   <div class="location"> <a href="#omo-valley-4"> <strong>Days 8-11:</strong> Omo Valley </a></div>
-   <div class="location"> <a href="#addis-ababa-5"> <strong>Day 11:</strong> Addis Ababa </a></div>
+   <div class="location simien-mountains-1"> <Link onClick={executeScrollSecond}> <strong>Days 2-4:</strong> Simien Mountains </Link></div>
+   <div class="location lalibela-2"> <Link onClick={executeScrollThird}> <strong>Days 4-6:</strong> Lalibela </Link></div>
+   <div class="location tigray-region-3"> <Link onClick={executeScrollFourth} > <strong>Days 6-8:</strong> Tigray Region </Link></div>
+   <div class="location omo-valley-4"> <Link onClick={executeScrollFifth}> <strong>Days 8-11:</strong> Omo Valley </Link></div>
+   <div class="location addis-ababa-5"> <Link onClick={executeScrollSixth}> <strong>Day 11:</strong> Addis Ababa </Link></div>
    <div class="call">
    <div class="floating_navigation__price">
       <div class="price-from floating-nav__price-from"> Prices start from</div>
@@ -359,10 +382,10 @@ const TripItinerary=()=>{
    </div>
    <div>
       <span class="ui-font v-align">Call us</span>
-      <div class="number v-align"> <a class="tel rTapNumber420176" href="tel:+16469802582" style={{visibility: "visible"}}>+1-646-980-2582</a></div>
+      <div class="number v-align"> <Link class="tel rTapNumber420176" to="tel:+251923052359" style={{visibility: "visible"}}>+251-92-305-2359</Link></div>
       <span class="ui-font v-align">or</span>
    </div>
-   <div class="shift"> <a class="btn btn-black" href="#cta-container"> Plan your adventure </a></div>
+   <div class="shift"> <Link class="btn btn-black" to="#cta-container"> Plan your adventure </Link></div>
 </div>
 </div>
 </div>

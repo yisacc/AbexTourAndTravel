@@ -1,11 +1,11 @@
 import { MDBContainer } from 'mdbreact';
 import react from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
-const Card=()=>{
+const Card=(props)=>{
 
-
+const {introduction,itineraryHighlights,whatsIncluded}=props;
     return(
         <>
 <MDBContainer className="abex-tour-container mt-5" fluid>
@@ -25,7 +25,7 @@ const Card=()=>{
               </ul>
               <div class="row centered-text-row mt-4">
    <div class="col-xs-12 col-md-8">
-      <p class="t-large"> Explore Ethiopia's incredible landscapes and fascinating culture on a seven-day trip through Lalibela, Tigray, the Simien Mountains and the Danakil Depression</p>
+      <p class="t-large"> {introduction}</p>
    </div>
 </div>
 <div class="row how-we-work-desktop mt-4">
@@ -59,26 +59,13 @@ const Card=()=>{
    <div class="col-xs-12 col-lg-6">
       <div class="list-pod">
          <h2 class="list-pod__title"> Itinerary highlights</h2>
-         <ul class="list-pod__list ">
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Explore the city of Addis Ababa and its many museums </span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Seek out Fasiledes Castle and Fasil Bath </span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Drive through the magnificent Simien National Park, spotting wildlife</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Discover the rock churches of Lalibela and Gheralta</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Venture into Omo Valley and gain insight into the culture of the Kara people </span></li>
-         </ul>
+         <div dangerouslySetInnerHTML={{__html: itineraryHighlights}} />
       </div>
    </div>
    <div class="col-xs-12 col-lg-6">
       <div class="list-pod">
          <h2 class="list-pod__title"> What's included</h2>
-         <ul class="list-pod__list ">
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Accommodation throughout</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Private transfers</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Private tours and experiences </span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Full support from your travel designer and concierge before, during and after your trip</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Expert guides in each destination</span></li>
-            <li> <img width="20" src="https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg"></img><span>Internal flights</span></li>
-         </ul>
+         <div dangerouslySetInnerHTML={{__html: whatsIncluded}} />
       </div>
    </div>
 </div>

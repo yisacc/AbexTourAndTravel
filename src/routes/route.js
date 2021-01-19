@@ -1,19 +1,24 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomePage from "../pages/home/homePage";
 import Lalibela from "../pages/destinations/lalibela/lalibela";
 import Ethiopia from "../pages/countries/ethiopia/ethiopia";
+import ContactUs from "../pages/contactUs/contact";
+import OurStory from "../pages/about/ourStory/ourstory";
+import DanakilDepression from "../pages/destinations/danakilDepression/danakilDepression";
+
 
 function AbexTourRoute() {
   return (
     <>
-    <Router>
-      <Route exact path="/" component={HomePage} />
-    <Route path="/home" component={HomePage} />
+    
+    <Route exact path="/" component={HomePage} />
       <Route path="/destinations/ethiopia" component={Ethiopia} />
       <Route path="/destinations/lalibela" component={Lalibela} />
+      <Route path="/contact" component={ContactUs} />
+      <Route path="/our-story" component={OurStory} />
+      <Route path="/danakil-depression" component={DanakilDepression} />
       
-      </Router>
     </>
   );
 }

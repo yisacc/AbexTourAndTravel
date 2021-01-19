@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
 import Lalibela1 from "../../../images/default-source/lalibela/Lalibela_church_exterior-1600x500-cc.jpg";
 import Lalibela2 from "../../../images/default-source/lalibela/Lalibela_churchgoers-1600x500-cc.jpg";
 import Lalibela3 from "../../../images/default-source/lalibela/Lalibela_Tess1-1600x500-cc.jpg";
 const CarouselPage = () => {
+  const [show,setShow]=useState(true);
   return (
       <MDBCarousel
       activeItem={1}
@@ -12,8 +13,9 @@ const CarouselPage = () => {
       showControls={true}
       showIndicators={false}
       className="z-depth-1"
+      onMouseOver={()=>setShow(false)} onMouseOut={()=>setShow(true)}
     >
-      <MDBCarouselInner>
+      <MDBCarouselInner onMouseOut={()=>setShow(true)} >
         <MDBCarouselItem itemId="1">
           <MDBView>
             <img
@@ -21,12 +23,14 @@ const CarouselPage = () => {
               src={Lalibela1}
               alt="First slide"
             />
-          <MDBMask overlay="black-light" />
+            {show?<MDBMask overlay="black-light" />:null}
+          
           </MDBView>
-          <MDBCarouselCaption>
-            <h3 className="h3-responsive">Light mask</h3>
+          {show?<MDBCarouselCaption>
+            <h3 className="h3-responsive">A Historical and Cultural Exploration of Ethiopia</h3>
             <p>First text</p>
-          </MDBCarouselCaption>
+          </MDBCarouselCaption>:null}
+          
         </MDBCarouselItem>
         <MDBCarouselItem itemId="2">
           <MDBView>
@@ -35,12 +39,12 @@ const CarouselPage = () => {
               src={Lalibela2}
               alt="Second slide"
             />
-          <MDBMask overlay="black-light" />
+          {show?<MDBMask overlay="black-light" />:null}
           </MDBView>
-          <MDBCarouselCaption>
-            <h3 className="h3-responsive">Strong mask</h3>
-            <p>Second text</p>
-          </MDBCarouselCaption>
+          {show?<MDBCarouselCaption>
+            <h3 className="h3-responsive">A Historical and Cultural Exploration of Ethiopia</h3>
+            <p>First text</p>
+          </MDBCarouselCaption>:null}
         </MDBCarouselItem>
         <MDBCarouselItem itemId="3">
           <MDBView>
@@ -49,12 +53,12 @@ const CarouselPage = () => {
               src={Lalibela3}
               alt="Third slide"
             />
-          <MDBMask overlay="black-light" />
+          {show?<MDBMask overlay="black-light" />:null}
           </MDBView>
-          <MDBCarouselCaption>
-            <h3 className="h3-responsive">Slight Mast</h3>
-            <p>Third text</p>
-          </MDBCarouselCaption>
+          {show?<MDBCarouselCaption>
+            <h3 className="h3-responsive">A Historical and Cultural Exploration of Ethiopia</h3>
+            <p>First text</p>
+          </MDBCarouselCaption>:null}
         </MDBCarouselItem>
       </MDBCarouselInner>
     </MDBCarousel>

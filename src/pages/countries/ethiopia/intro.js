@@ -1,5 +1,6 @@
 import react from 'react';
 import {MDBContainer} from 'mdbreact';
+import {Link} from 'react-router-dom';
 
 function IntroSection(){
 return(
@@ -11,8 +12,8 @@ return(
          <div class="content-col-1 col-xs-12 col-lg-7">
             <div class="component-content-text">
                <p>Abex Travel creates bespoke luxury trips to Ethiopia. Our travel experts design your perfect itinerary, with the best accommodation, exclusive tours and a local guide who shares your interests, and we sort out all the detail.</p>
-               <p>Enjoy a warm welcome, relax and experience the true adventure of Latin America. Whatever you want your trip to include, at Abex Travel we’ll create a bespoke trip just for you. Choose experiences and activities in <a href="/latin-america/peru/">Peru</a>, <a href="/latin-america/galapagos/">The Galapagos</a>,&nbsp;<a href="/latin-america/argentina/">Argentina</a>, <a href="/latin-america/chile/">Chile</a>, <a href="/latin-america/costa-rica/">Costa Rica</a>, <a href="/latin-america/belize/">Belize</a>, <a href="/latin-america/bolivia/">Bolivia</a>, <a href="/latin-america/brazil/">Brazil</a>, <a href="/latin-america/ecuador/">Ecuador</a>, &nbsp;<a href="/latin-america/mexico/">Mexico</a>&nbsp;and <a href="/latin-america/uruguay/">Uruguay</a>.</p>
-               <p>If you have more time, why not try our <a href="https://staging.jacadatravel.com/latin-america/grand-tours/">Grand Tours of Latin America</a>, taking in more of the region in one incredible trip.</p>
+               <p>Enjoy a warm welcome, relax and experience the true adventure of Latin America. Whatever you want your trip to include, at Abex Travel we’ll create a bespoke trip just for you. Choose experiences and activities in <Link to="/latin-america/peru/">Peru</Link>, <Link to="/latin-america/galapagos/">The Galapagos</Link>,&nbsp;<Link to="/latin-america/argentina/">Argentina</Link>, <Link to="/latin-america/chile/">Chile</Link>, <Link to="/latin-america/costa-rica/">Costa Rica</Link>, <Link to="/latin-america/belize/">Belize</Link>, <Link to="/latin-america/bolivia/">Bolivia</Link>, <Link to="/latin-america/brazil/">Brazil</Link>, <Link to="/latin-america/ecuador/">Ecuador</Link>, &nbsp;<Link to="/latin-america/mexico/">Mexico</Link>&nbsp;and <Link to="/latin-america/uruguay/">Uruguay</Link>.</p>
+               <p>If you have more time, why not try our <Link to="https://staging.jacadatravel.com/latin-america/grand-tours/">Grand Tours of Latin America</Link>, taking in more of the region in one incredible trip.</p>
             </div>
          </div>
          <div class="content-col-2 col-lg-offset-1 col-xs-12 col-md-12 col-lg-4">

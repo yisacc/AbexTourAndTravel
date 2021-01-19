@@ -1,5 +1,6 @@
 import React from 'react';
 import {MDBContainer} from 'mdbreact';
+import {Link} from 'react-router-dom';
 
 function ScrollNav(){
     return(
@@ -9,12 +10,12 @@ function ScrollNav(){
       <div class="navigation-d">
       <MDBContainer className="abex-tour-container" fluid>
             <ul class="tab-bar">
-               <li><a href="#intro" class="active">Intro</a></li>
-               <li><a href="#example_trips" class="">Example trips</a></li>
-               <li><a href="#destinations">Destinations</a></li>
-               <li><a href="#inspiration">Inspiration</a></li>
+               <li><Link to="#intro" class="active">Intro</Link></li>
+               <li><Link to="#example_trips" class="">Example trips</Link></li>
+               <li><Link to="#destinations">Destinations</Link></li>
+               <li><Link to="#inspiration">Inspiration</Link></li>
             </ul>
-            <div class="number-d"> <span class="ui-font">Call</span> <span class="number"> <a class="rTapNumber420177" href="tel:+251923052359" style={{visibility: "visible"}}>+251-92-305-2359</a> </span> <a class="btn btn-primary hidden-lg-down" href="https://www.jacadatravel.com/contact/"> Get in touch </a></div>
+            <div class="number-d"> <span class="ui-font">Call</span> <span class="number"> <Link class="rTapNumber420177" to="tel:+251923052359" style={{visibility: "visible"}}>+251-92-305-2359</Link> </span> <Link class="btn btn-primary hidden-lg-down" to="https://www.jacadatravel.com/contact/"> Get in touch </Link></div>
          </MDBContainer>
       </div>
    </div>

@@ -1,5 +1,6 @@
 import react from 'react';
 import {MDBContainer,MDBCardGroup,MDBCard,MDBCardImage,MDBCardBody,MDBCardTitle,MDBCardText} from 'mdbreact';
+import { Link } from 'react-router-dom';
 
 function ExampleTrips(){
 return(
@@ -11,14 +12,15 @@ return(
         <MDBCardImage src="https://www.jacadatravel.com/wp-content/uploads/fly-images/175928/madikwe-hills-safari-362x210-cc.jpg" alt="MDBCard image cap" top hover
           overlay="white-slight" />
         <MDBCardBody className="packages-card-body">
-          <MDBCardTitle className="travel-packages-title" tag="h5"> Safari, Wine and Waterfalls</MDBCardTitle>
+          <MDBCardTitle className="travel-packages-title" tag="h5"> A Historical and Cultural Exploration of Ethiopia</MDBCardTitle>
           <div className="card-label t-tag">
           <div className="price-from">Prices start from</div>
           <div className="price-from">$10,500</div>
           </div>
           <MDBCardText className="travel-packages-description">
-          Discover the jewels of Southern Africa in this luxurious 10-day adventure
+          Discover the jewels of Ethiopia in this luxurious 11-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
         </MDBCardBody>
       </MDBCard>
 
@@ -34,6 +36,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
 
@@ -49,6 +53,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
     
@@ -66,6 +72,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
 
@@ -81,6 +89,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
 
@@ -96,6 +106,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
     
@@ -113,6 +125,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
 
@@ -128,6 +142,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
 
@@ -143,6 +159,8 @@ return(
           <MDBCardText className="travel-packages-description">
           Discover the jewels of Southern Africa in this luxurious 10-day adventure
           </MDBCardText>
+          <div class="card-button t-tag t-tag--black"><Link to="/destinations/lalibela" class="t-tag">EXPLORE THIS TRIP</Link></div>
+
         </MDBCardBody>
       </MDBCard>
     

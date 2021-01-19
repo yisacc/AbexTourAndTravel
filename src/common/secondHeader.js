@@ -1,13 +1,12 @@
 import React, { Component, useState } from "react";
 import {
-MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,MDBContainer,MDBBtn,MDBDropdown,MDBDropdownToggle,MDBDropdownItem,MDBDropdownMenu
+MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,MDBContainer,MDBBtn
 } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
-import Dropdown from './headerDropDown';
+import { BrowserRouter as Router,Link } from 'react-router-dom';
 
 function SecondNavbarPage() {
     const [state,setState]=useState(false);
-    
+  
     const toggleCollapse = () => {
   setState(!state);
 }
@@ -20,17 +19,17 @@ const setHide=(e)=>{
 const setShow=(e)=>{
   e.target.parentElement.classList.add("active");
 }
-const removeFocus=(e)=>{
-  if(e.currentTarget.className==="menu-item-has-children"){
-    e.currentTarget.classList.remove("focus");
-  }
-    e.target.parentElement.classList.remove("focus");
-}
-const addFocus=(e)=>{
-  e.target.parentElement.classList.add("focus");
-}
+// const removeFocus=(e)=>{
+//   if(e.currentTarget.className==="menu-item-has-children"){
+//     e.currentTarget.classList.remove("focus");
+//   }
+//     e.target.parentElement.classList.remove("focus");
+// }
+// const addFocus=(e)=>{
+//   e.target.parentElement.classList.add("focus");
+// }
   return (
-    <Router>
+    <>
         
       <MDBNavbar className="abex-tour-navigation" dark expand="md">
       <MDBContainer className="abex-tour-container" fluid>
@@ -42,51 +41,30 @@ const addFocus=(e)=>{
             onMouseLeave={(e)=>setHide(e)}>
               <MDBNavLink to="#!">Destinations</MDBNavLink>
                 <ul class="sub-menu dropdown">
-   <li class="menu-item-has-children" onMouseOver={(e)=>addFocus(e)}
-            onMouseLeave={(e)=>removeFocus(e)}>
-      <a href="/destinations/ethiopia">Ethiopia</a>
-      <ul class="sub-menu"></ul>
-      <ul class="sub-list" style={{left: "calc(100% + 0px)"}}>
-   <li><a href="/destinations/lalibela">Lalibela</a></li>
-   <li><a href="/#">Danakil Depression</a></li>
-   <li><a href="/#">OMO Valley</a></li>
-   <li><a href="/#">Simen Mountains</a></li>
-   <li><a href="/#">Bale Mountains</a></li>
-   <li><a href="/#">Tigray Region</a></li>
-   <li><a href="/#">Addis Ababa</a></li>
-   <li><a href="/#">Costa Rica</a></li>
-   <li><a href="/#">Ecuador</a></li>
-   <li><a href="/#">Galapagos</a></li>
-   <li><a href="/#">Guatemala</a></li>
-</ul>
-<ul class="sub-list" style={{left: "calc(100% + 220px)"}}>
-   <li><a href="https://www.jacadatravel.com/latin-america/mexico/">Mexico</a></li>
-   <li><a href="https://www.jacadatravel.com/latin-america/panama/">Panama</a></li>
-   <li><a href="https://www.jacadatravel.com/luxury-patagonia-tours/">Patagonia</a></li>
-   <li><a href="https://www.jacadatravel.com/latin-america/peru/">Peru</a></li>
-   <li><a href="https://www.jacadatravel.com/latin-america/uruguay/">Uruguay</a></li>
-</ul>
+   <li class="menu-item-has-children" >
+      <Link to="/destinations/ethiopia">Ethiopia</Link>
+
       </li>
    <li class="menu-item-has-children">
-      <a href="/#">Kenya</a>
+      <Link to="/#">Kenya</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="/#">Uganda</a>
+      <Link to="/#">Uganda</Link>
      </li>
    <li class="menu-item-has-children">
-      <a href="/#">Djibouti</a>
+      <Link to="/#">Djibouti</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="/#">Eritrea</a>
+      <Link to="/#">Eritrea</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="/#">Somalia</a>
+      <Link to="/#">Somalia</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="/#">South Sudan</a>
+      <Link to="/#">South Sudan</Link>
       </li>
    <li class="menu-item-has-children"> 
-      <a href="/#">Sudan</a>
+      <Link to="/#">Sudan</Link>
      </li>
 </ul>
             </MDBNavItem>
@@ -94,29 +72,26 @@ const addFocus=(e)=>{
             onMouseLeave={(e)=>setHide(e)}>
               <MDBNavLink to="#!">Honeymoons</MDBNavLink>
               <ul class="sub-menu dropdown">
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/latin-america/">Latin America</a>
-      </li>
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/africa/">Africa</a>
+              <li class="menu-item-has-children">
+      <Link to="/#">Kenya</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/europe/">Europe</a>
+      <Link to="/#">Uganda</Link>
      </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/asia/">Asia</a>
+      <Link to="/#">Djibouti</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/indian-subcontinent/">Indian Subcontinent</a>
+      <Link to="/#">Eritrea</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/australasia/">Australasia</a>
+      <Link to="/#">Somalia</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/polar/">Polar</a>
+      <Link to="/#">South Sudan</Link>
       </li>
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/south-pacific/">South Pacific</a>
+   <li class="menu-item-has-children"> 
+      <Link to="/#">Sudan</Link>
      </li>
 </ul>
             </MDBNavItem>
@@ -124,42 +99,45 @@ const addFocus=(e)=>{
             onMouseLeave={(e)=>setHide(e)}>
             <MDBNavLink to="#!">Family Trips</MDBNavLink>
             <ul class="sub-menu dropdown">
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/latin-america/">Latin America</a>
-      </li>
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/africa/">Africa</a>
+              <li class="menu-item-has-children">
+      <Link to="/#">Kenya</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/europe/">Europe</a>
+      <Link to="/#">Uganda</Link>
      </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/asia/">Asia</a>
+      <Link to="/#">Djibouti</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/indian-subcontinent/">Indian Subcontinent</a>
+      <Link to="/#">Eritrea</Link>
       </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/australasia/">Australasia</a>
+      <Link to="/#">Somalia</Link>
        </li>
    <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/polar/">Polar</a>
+      <Link to="/#">South Sudan</Link>
       </li>
-   <li class="menu-item-has-children">
-      <a href="https://www.jacadatravel.com/south-pacific/">South Pacific</a>
+   <li class="menu-item-has-children"> 
+      <Link to="/#">Sudan</Link>
      </li>
-</ul>
-            </MDBNavItem>
+</ul>  </MDBNavItem>
             
-            <MDBNavItem onMouseOver={(e)=>setShow(e)}
+            <MDBNavItem className="wide menu-item-has-children main-menu-item" onMouseOver={(e)=>setShow(e)}
             onMouseLeave={(e)=>setHide(e)}>
             <MDBNavLink to="#!">About</MDBNavLink>
-            
+            <ul class="sub-menu dropdown">
+              <li class="menu-item-has-children">
+      <Link to="/our-story">Our Story</Link>
+       </li>
+   <li class="menu-item-has-children">
+      <Link to="/#">What We Do</Link>
+     </li>
+   </ul>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
             <MDBNavItem>
-            <MDBBtn className="abex-tour-primary-btn">Contact Us</MDBBtn>
+            <MDBBtn className="abex-tour-primary-btn"> <Link to="/contact">Contact Us</Link></MDBBtn>
             
             </MDBNavItem>
 
@@ -168,7 +146,7 @@ const addFocus=(e)=>{
         </MDBContainer>
       </MDBNavbar>
      
-    </Router>
+    </>
     );
   }
 

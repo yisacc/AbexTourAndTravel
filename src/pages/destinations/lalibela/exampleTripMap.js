@@ -1,6 +1,6 @@
 import react from 'react';
 import {MDBContainer} from 'mdbreact';
-import lalibelamap from '../../../images/maps/Capture.PNG';
+import lalibelamap from '../../../images/maps/mapLalibela.PNG';
 
 const ExampleTripMap=()=>{
    const mapStyles = {        
