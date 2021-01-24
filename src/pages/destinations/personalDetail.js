@@ -1,28 +1,33 @@
 import react, { useState } from 'react';
 
 
-const PersonalDetail=()=>{
+const PersonalDetail=(props)=>{
+   const {handleValueChange,data,handleChecked,validate,notCompleted}=props;
+   
 const [show,setShow]=useState(false);
+const handleCodeChange=(event)=>{
+   debugger;
+}
 
 return(
     <>
 <div class="form-section">
    <strong class="form-heading"> Your details </strong>
    <div class="form-group">
-      <label> Full name <span class="required">(required)</span> </label> <input name="client_name" type="text" class="form-control validate icon icon-person" placeholder="First name, Surname" />
-      <div class="error-message d-none" id="errorName" >You haven't entered your name.</div>
+      <label> Full name <span class="required">(required)</span> </label> <input name="client_name" onChange={(e)=>handleValueChange(e)} defaultValue={data.client_name} type="text" class="form-control validate icon icon-person" placeholder="First name, Surname" />
+      {notCompleted.formCompleted&&notCompleted.client_name?<div class="error-message" id="errorName" >You haven't entered your name.</div>:null}
    </div>
    <div class="form-group">
       <label> Phone number <span class="required">(required)</span> </label> 
       <div class="intl-tel-input allow-dropdown separate-dial-code iti-sdc-4">
-         <div class="flag-container">
+         <div class="flag-container" onMouseLeave={()=>setShow(false)}>
             <div class="selected-flag" onClick={()=>setShow(!show)} tabindex="0" title="Ethiopia: +251">
                <div class="iti-flag et"></div>
                <div class="selected-dial-code">+251</div>
                <div class="iti-arrow"></div>
             </div>
-            <ul class="country-list hide">
-   <li class="country preferred" data-dial-code="1" data-country-code="us">
+            <ul className={`country-list ${show?'':'hide'}`} >
+   <li class="country preferred" onclick={(e)=>handleCodeChange(e)} data-dial-code="1" data-country-code="us">
       <div class="flag-box">
          <div class="iti-flag us"></div>
       </div>
@@ -1518,20 +1523,20 @@ return(
       <span class="country-name">Åland Islands</span><span class="dial-code">+358</span>
    </li>
 </ul> </div>
-         <input name="client_phone_number" type="tel" class="form-control validate" placeholder="" autocomplete="off" />
+         <input name="client_phone_number" onChange={(e)=>handleValueChange(e)} defaultValue={data.client_phone_number} type="tel" class="form-control validate" placeholder="" autocomplete="off" />
       </div>
-      <div class="error-message d-none" id="errorPhone"> Please enter a valid phone number so we can get in touch.</div>
+      {notCompleted.formCompleted&&notCompleted.client_phone_number?<div class="error-message" id="errorPhone"> Please enter a valid phone number so we can get in touch.</div>:null}
    </div>
    <div class="form-group">
-      <label> Email address <span class="required">(required)</span> </label> <input name="client_email" type="email" class="form-control validate icon icon-email" placeholder="Enter email address" />
-      <div class="error-message d-none" id="errorEmail"> Please enter a valid email address so we can get in touch.</div>
+      <label> Email address <span class="required">(required)</span> </label> <input name="client_email" onChange={(e)=>handleValueChange(e)} defaultValue={data.client_email} type="email" class="form-control validate icon icon-email" placeholder="Enter email address" />
+      {notCompleted.formCompleted&&notCompleted.client_email? <div class="error-message" id="errorEmail"> Please enter a valid email address so we can get in touch.</div>:null}
    </div>
    <div class="consent">
       
       <div class="row consent-text lg-checkbox">
-         <div class="col-md-12">
-            <input type="checkbox" name="consent_processing" class="validate" value="I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip." />
-            <p onclick="$('input[name=\'consent_processing\']').prop('checked', !$('input[name=\'consent_processing\']').prop('checked')).triggerHandler('change');"> I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip. <span class="required">(required)</span></p>
+         <div class="col-md-12" onClick={(e)=>handleChecked(e)}>
+            <input onChange={(e)=>{handleChecked(e)}} checked={data.consent_processing}  type="checkbox" name="consent_processing" class="validate" value="I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip." />
+            <p> I agree to the processing of my personal information across Abex Travel's global offices, in order to book my trip. <span class="required">(required)</span></p>
             <div class="error-message d-none" id="errorConsent">Please provide consent to allow us to process your enquiry.</div>
          </div>
       </div>
@@ -1542,59 +1547,10 @@ return(
             <p role="status" aria-live="polite" aria-atomic="true"></p>
             <ul></ul>
          </div>
-         <form action="/africa/trips/epic-ethiopia-helicopter/#wpcf7-f207620-p191672-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-            <div style={{display: "none"}}> 
-            <input type="hidden" name="_wpcf7" value="207620" /> 
-            <input type="hidden" name="_wpcf7_version" value="5.3.2" /> 
-            <input type="hidden" name="_wpcf7_locale" value="en_US" /> 
-            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f207620-p191672-o1" />
-                 <input type="hidden" name="_wpcf7_container_post" value="191672" /> 
-                 <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                 </div>
-            <div style={{display: "none"}}>
-                 <span class="wpcf7-form-control-wrap client_name">
-                     <input type="text" name="client_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> 
-                     <span class="wpcf7-form-control-wrap client_phone_number">
-                         <input type="text" name="client_phone_number" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> 
-                         <span class="wpcf7-form-control-wrap client_email">
-                             <input type="email" name="client_email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> 
-                             <span class="wpcf7-form-control-wrap date_day">
-                                 <input type="text" name="date_day" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
-                                     </span>
-                                      <span class="wpcf7-form-control-wrap date_month"
-                                      ><input type="text" name="date_month" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
-                                          </span>
-                                           <span class="wpcf7-form-control-wrap date_year">
-                                               <input type="text" name="date_year" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
-                                               </span> 
-                                               <span class="wpcf7-form-control-wrap number_of_passengers">
-                                                   <input type="text" name="number_of_passengers" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> 
-                                                   <span class="wpcf7-form-control-wrap budget">
-                                                       <input type="number" name="budget" value="" class="wpcf7-form-control wpcf7-number wpcf7-validates-as-number" id="budget" aria-invalid="false" /></span>
-                                                        <span class="wpcf7-form-control-wrap details">
-                                                            <textarea name="details" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea>
-                                                            </span> 
-                                                            <span class="wpcf7-form-control-wrap dynamicname_gclid">
-                                                                <input type="hidden" name="dynamicname_gclid" value="" size="40" class="wpcf7-form-control wpcf7dtx-dynamictext wpcf7-dynamichidden" aria-invalid="false" />
-                                                                    </span>
-                                                                     <span class="wpcf7-form-control-wrap dynamicname_rfid"><input type="hidden" name="dynamicname_rfid" value="" size="40" class="wpcf7-form-control wpcf7dtx-dynamictext wpcf7-dynamichidden" aria-invalid="false" /></span> 
-                                                                     <span class="wpcf7-form-control-wrap dynamicname_country_code">
-                                                                         <input type="hidden" name="dynamicname_country_code" value="ET" size="40" class="wpcf7-form-control wpcf7dtx-dynamictext wpcf7-dynamichidden" aria-invalid="false" />
-                                                                         </span>
-                                                                          <span class="wpcf7-form-control-wrap consent_processing">
-                                                                              <input type="text" name="consent_processing" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> 
-                                                                              <span class="wpcf7-form-control-wrap consent_newsletter">
-                                                                                  <input type="text" name="consent_newsletter" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" />
-                                                                                  </span>
-                                                                                  <span class="wpcf7-form-control-wrap consent_processing">
-                                                                                      <input type="text" name="consent_processing" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" />
-                                                                                      </span> 
-                                                                                      <span class="wpcf7-form-control-wrap consent_newsletter">
-                                                                                          </span>
-                                                                                          </div>
-            <p class="submit"> <input type="submit" value="Start my Journey" class="wpcf7-form-control wpcf7-submit btn btn-dark-primary btn-lg" style={{opacity: 0.5}} /><span class="ajax-loader"></span></p>
+            
+            <p class="submit"> <input onClick={(e)=>validate(e)} type="submit" value="Start my Journey" class="wpcf7-form-control wpcf7-submit btn btn-dark-primary btn-lg" /><span class="ajax-loader"></span></p>
             <div class="wpcf7-response-output" aria-hidden="true"></div>
-         </form>
+         
       </div>
    </div>
 </div>

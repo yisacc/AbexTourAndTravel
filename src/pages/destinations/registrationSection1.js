@@ -1,8 +1,7 @@
 import react from 'react';
 
 function RegistrationSection1(props){
-   debugger;
-   const {destinations,AddDestination,handleChange,destination,removeItem}=props;
+   const {destinations,AddDestination,handleChange,destination,removeItem,handleValueChange,data,notCompleted}=props;
     return(
         <>
         <div class="form-section">
@@ -22,7 +21,7 @@ function RegistrationSection1(props){
    <div class="col-xs-12 col-sm-4 col-lg-12">
       <div class="form-group">
          <label for="number_of_passengers"> How many people are travelling? <span class="required">(required)</span> </label> 
-         <select id="number_of_passengers" name="number_of_passengers" class="form-control validate">
+         <select defaultValue={data.number_of_passengers} id="number_of_passengers" name="number_of_passengers" className={`form-control validate ${data.number_of_passengers!==''?'has-value':''}`}  onChange={(e)=>handleValueChange(e)}>
             <option value="">-</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -36,7 +35,7 @@ function RegistrationSection1(props){
             <option value="10">10</option>
             <option value="10+">10+</option>
          </select>
-         <div class="error-message d-none" id="errorPassengers">Please enter the number of passengers.</div>
+         {notCompleted.formCompleted&&notCompleted.number_of_passengers?<div class="error-message" id="errorPassengers">Please enter the number of passengers.</div>:null}
       </div>
    </div>
 </div>
@@ -44,7 +43,7 @@ function RegistrationSection1(props){
          <div class="row">
    <div class="col-xs-6 col-sm-4">
       <label class="sub">Year</label> 
-      <select name="date_year_new" class="form-control full">
+      <select defaultValue={data.date_year_new} name="date_year_new" className={`form-control full ${data.date_year_new!==''?'has-value':''}`} onChange={(e)=>handleValueChange(e)}>
          <option value="">Any Year</option>
          <option value="2021"> 2021</option>
          <option value="2022"> 2022</option>
@@ -54,7 +53,7 @@ function RegistrationSection1(props){
    </div>
    <div class="col-xs-6 col-sm-4">
       <label class="sub">Month</label> 
-      <select name="date_month_new" class="form-control full">
+      <select defaultValue={data.date_month_new} name="date_month_new" className={`form-control full ${data.date_month_new!==''?'has-value':''}`} onChange={(e)=>handleValueChange(e)}>
          <option value="">Any Month</option>
          <option value="01">January</option>
          <option value="02">February</option>
@@ -72,7 +71,7 @@ function RegistrationSection1(props){
    </div>
    <div class="hidden-xs col-sm-4">
       <label class="sub">Day</label> 
-      <select name="date_day_new" class="form-control full">
+      <select defaultValue={data.date_day_new} name="date_day_new" className={`form-control full ${data.date_day_new!==''?'has-value':''}`}  onChange={(e)=>handleValueChange(e)}>
          <option value="">Any Day</option>
          <option value="01">1</option>
          <option value="02">2</option>
@@ -112,13 +111,13 @@ function RegistrationSection1(props){
          <div class="form-section">
    <div class="form-group">
       <strong class="form-heading"> Your Trip </strong> <label> Tell us about your ideal trip <span class="required">(required)</span> </label>
-      <textarea name="details" rows="10" class="form-control validate icon icon-pencil" placeholder="Be as detailed as you like..."></textarea>
-      <div class="error-message d-none" id="errorDetails">Please leave a message so we can start planning your bespoke trip.</div>
+      <textarea name="details" rows="10" className={`form-control validate icon icon-pencil ${data.details!==''?'has-value':''}`} placeholder="Be as detailed as you like..." onChange={(e)=>handleValueChange(e)}></textarea>
+      {notCompleted.formCompleted&&notCompleted.details?<div class="error-message" id="errorDetails">Please leave a message so we can start planning your bespoke trip.</div>:null}
    </div>
    <div class="form-group">
       <label for="selectAspect"> What is the most important aspect of this trip for you? </label>
       <div class="custom-select">
-         <select name="aspect" id="selectAspect" class="form-control full icon icon-default">
+         <select defaultValue={data.aspect} name="aspect" id="selectAspect" className={`form-control full icon icon-default ${data.aspect!==''?'has-value':''}`} onChange={(e)=>handleValueChange(e)}>
             <option value=""> Please choose from the list</option>
             <option value="adventure">Adventure</option>
             <option value="nature">Nature</option>

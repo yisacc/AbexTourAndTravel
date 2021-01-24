@@ -1,7 +1,8 @@
 import react from 'react';
 import PersonalDetail from './personalDetail';
 
-function RegistrationSection2(){
+function RegistrationSection2(props){
+   const {handleValueChange,data,handleChecked,validate,notCompleted}=props;
     return(
         <>
 
@@ -13,7 +14,7 @@ function RegistrationSection2(){
       <div class="col-sm-6">
          <div class="form-group">
             <label>Currency</label> 
-            <select name="currency" class="form-control has-value">
+            <select name="currency" onChange={(e)=>handleValueChange(e)} defaultValue={data.currency} class="form-control has-value">
                <option value="USD"> $ USD</option>
                <option value="GBP"> £ GBP</option>
                <option value="AUD"> $ AUD</option>
@@ -29,7 +30,7 @@ function RegistrationSection2(){
       <div class="col-sm-6">
          <div class="form-group">
             <label>Max. budget per person</label> 
-            <select name="budget" class="form-control">
+            <select name="budget" onChange={(e)=>handleValueChange(e)} className={`form-control ${data.budget!==''?'has-value':''}`}  class="form-control" defaultValue={data.budget}>
                <option value="-">-</option>
                <option value="4000">$4,000</option>
                <option value="5000">$5,000</option>
@@ -48,7 +49,7 @@ function RegistrationSection2(){
       </div>
    </div>
 </div>
-                <PersonalDetail />
+                <PersonalDetail handleValueChange={handleValueChange} data={data} handleChecked={handleChecked} validate={validate} notCompleted={notCompleted} />
                  </div>
              </div>
         

@@ -297,6 +297,27 @@ body {
   font-family: Aileron;
   font-weight: 400;
 }
+@media only screen and (max-width: 600px) {
+  .abex-tour-primary-heading {
+    font-size: 1rem !important;
+  }
+  .passport-CarouselCaption {
+    text-shadow: 1px 1px 11px #000;
+    height: auto !important;
+    z-index: 99999 !important;
+    top: 2px !important;
+    width: 97% !important;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    padding: 6px 10px !important;
+    line-height: 1.5;
+    margin-bottom: 0 !important;
+    font-size: 2em !important;
+    bottom: unset !important;
+  }
+}
+
 .navbar .abex-tour-dropdown a:hover {
   background-color: rgba(0, 0, 0, 0.08) !important;
   color: #fff !important;
@@ -1696,6 +1717,210 @@ h6.no-margin {
 }
 .intl-tel-input .hide {
   display: none;
+}
+select.form-control.has-value {
+  color: #000;
+}
+.custom-select::before {
+  background: no-repeat center/12px
+    url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-arrow-down-black.svg);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: -14px;
+  right: 55px;
+  pointer-events: none;
+  width: 15px;
+}
+
+.lg-checkbox p:before,
+.lg-checkbox label:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -35px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.lg-checkbox input[type='checkbox']:checked + p::before,
+.lg-checkbox input[type='checkbox']:checked + label::before {
+  background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/images/icon-tick-gold.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.intl-tel-input .country-list .country {
+  padding: 5px 10px;
+}
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name {
+  margin-right: 6px;
+}
+.intl-tel-input .country-list .flag-box,
+.intl-tel-input .country-list .country-name,
+.intl-tel-input .country-list .dial-code {
+  vertical-align: middle;
+}
+.intl-tel-input .country-list .flag-box {
+  display: inline-block;
+  width: 20px;
+}
+.form-enquiry .error-message {
+  background: #ffecec;
+  color: #e64a4a;
+  font-size: 14px;
+  margin: 8px 0 0;
+  padding: 0.5rem 1rem;
+}
+.form-enquiry .error-message::before {
+  content: '';
+  display: block;
+}
+.iti-flag.us {
+  height: 11px;
+  background-position: -5241px 0;
+}
+.iti-flag.gb {
+  height: 10px;
+  background-position: -1775px 0;
+}
+.iti-flag.ca {
+  height: 10px;
+  background-position: -834px 0;
+}
+.iti-flag.hk {
+  background-position: -2171px 0;
+}
+.iti-flag.au {
+  height: 10px;
+  background-position: -286px 0;
+}
+.iti-flag.sg {
+  background-position: -4449px 0;
+}
+.iti-flag.af {
+  background-position: -66px 0;
+}
+.iti-flag.al {
+  height: 15px;
+  background-position: -132px 0;
+}
+.iti-flag.dz {
+  background-position: -1401px 0;
+}
+.iti-flag.as {
+  height: 10px;
+  background-position: -242px 0;
+}
+.iti-flag.ad {
+  background-position: -22px 0;
+}
+.iti-flag.ao {
+  background-position: -176px 0;
+}
+.iti-flag.ai {
+  height: 10px;
+  background-position: -110px 0;
+}
+.iti-flag.ag {
+  background-position: -88px 0;
+}
+.iti-flag.ar {
+  height: 13px;
+  background-position: -220px 0;
+}
+.iti-flag.am {
+  height: 10px;
+  background-position: -154px 0;
+}
+.iti-flag.aw {
+  background-position: -308px 0;
+}
+.iti-flag.au {
+  height: 10px;
+  background-position: -286px 0;
+}
+.iti-flag.at {
+  background-position: -264px 0;
+}
+.iti-flag.az {
+  height: 10px;
+  background-position: -352px 0;
+}
+.iti-flag.bs {
+  height: 10px;
+  background-position: -702px 0;
+}
+.iti-flag.bh {
+  height: 12px;
+  background-position: -504px 0;
+}
+.iti-flag.bd {
+  height: 12px;
+  background-position: -418px 0;
+}
+.iti-flag.bb {
+  background-position: -396px 0;
+}
+.iti-flag.by {
+  height: 10px;
+  background-position: -790px 0;
+}
+.iti-flag.be {
+  height: 15px;
+  background-position: -440px 0;
+}
+.iti-flag.bz {
+  background-position: -812px 0;
+}
+.iti-flag.bj {
+  background-position: -548px 0;
+}
+.iti-flag.bm {
+  height: 10px;
+  background-position: -592px 0;
+}
+.iti-flag.bt {
+  background-position: -724px 0;
+}
+.iti-flag.bo {
+  background-position: -636px 0;
+}
+.iti-flag.ba {
+  height: 10px;
+  background-position: -374px 0;
+}
+.iti-flag.bw {
+  background-position: -768px 0;
+}
+.iti-flag.br {
+  background-position: -680px 0;
+}
+.iti-flag.io {
+  height: 10px;
+  background-position: -2435px 0;
+}
+.iti-flag.vg {
+  height: 10px;
+  background-position: -5368px 0;
+}
+.iti-flag.bn {
+  height: 10px;
+  background-position: -614px 0;
+}
+.iti-flag.bg {
+  height: 12px;
+  background-position: -482px 0;
+}
+.iti-flag.bf {
+  background-position: -460px 0;
+}
+.iti-flag.bi {
+  height: 12px;
+  background-position: -526px 0;
 }
 /* ******************end contact us css ******************* */
 /* ******************start our story css ******************* */
