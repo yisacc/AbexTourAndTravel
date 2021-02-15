@@ -93,7 +93,7 @@ h1.underlined::after {
   text-align: center;
 }
 .abex-tour-card-header {
-  font-size: 1.375rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin: 1.7142857143rem 0;
   line-height: 1.33;
@@ -291,7 +291,7 @@ body {
   display: inline !important;
 }
 .abex-tour-primary-heading {
-  font-size: 6.25rem;
+  font-size: 3.25rem;
   line-height: 1;
   margin: 0 0 20px;
   font-family: Aileron;
@@ -493,6 +493,11 @@ body {
   width: 60%;
   display: inline-block;
   vertical-align: middle;
+}
+@media (max-width: 767px) {
+  .destinations-wrap {
+    width: 100% !important;
+  }
 }
 .form-enquiry input[type='text'].icon-location {
   background-image: url(https://www.jacadatravel.com/wp-content/themes/jacada/assets/css/../images/icon-location.svg);
@@ -778,6 +783,10 @@ textarea.form-control {
 /* ******************start Trip Iternary css******************* */
 .example-trip-itinerary {
   position: relative;
+}
+.h1,
+h1 {
+  font-size: 2rem !important;
 }
 
 @media (min-width: 544px) {

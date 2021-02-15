@@ -1,11 +1,10 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask } from
 "mdbreact";
-import Lalibela1 from "../../../images/default-source/lalibela/Lalibela_church_exterior-1600x500-cc.jpg";
-import Lalibela2 from "../../../images/default-source/lalibela/Lalibela_churchgoers-1600x500-cc.jpg";
-import Lalibela3 from "../../../images/default-source/lalibela/Lalibela_Tess1-1600x500-cc.jpg";
-const CarouselPage = () => {
+const CarouselPage = (props) => {
+  const {carouselData}=props;
   return (
+    
       <MDBCarousel
       activeItem={1}
       length={1}
@@ -18,14 +17,13 @@ const CarouselPage = () => {
           <MDBView>
             <img
               className="d-block w-100"
-              src={Lalibela1}
+              src={'http://localhost:1337'+carouselData.url}
               alt="First slide"
             />
           <MDBMask overlay="black-light" />
           </MDBView>
           <MDBCarouselCaption>
-            <h3 className="h3-responsive">Light mask</h3>
-            <p>First text</p>
+            <h3 className="h3-responsive">{carouselData.bannerText}</h3>
           </MDBCarouselCaption>
         </MDBCarouselItem>
          </MDBCarouselInner>

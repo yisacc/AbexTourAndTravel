@@ -7,7 +7,6 @@ import TripItinerary from './tripItinerary';
 import axiosInstance from '../../../utils/axios';
 
 function DanakilDepression(){
-    debugger;
     const [carousel,setCarousel]=useState([]);
     const [introduction,setIntroduction]=useState('');
     const [itineraryHighlights,setItineraryHighlights]=useState('');
@@ -17,7 +16,6 @@ function DanakilDepression(){
     useEffect(() => {
     axiosInstance.get('/example-trips')
     .then((todo) => {
-        debugger;
             setCarousel(todo.data[0].Carousel);
             setIntroduction(todo.data[0].Introduction);
             setItineraryHighlights(todo.data[0].ItineraryHighlights);

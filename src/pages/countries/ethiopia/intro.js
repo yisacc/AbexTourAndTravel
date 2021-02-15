@@ -2,18 +2,17 @@ import react from 'react';
 import {MDBContainer} from 'mdbreact';
 import {Link} from 'react-router-dom';
 
-function IntroSection(){
+function IntroSection(props){
+   const {introSecData}=props;
 return(
     <>
     <section class="component-content component-index-3 bg-white padded-section active" id="intro" data-label="Intro">
     <MDBContainer className="abex-tour-container" fluid>
-      <h2 class="text-center"> Abex Travel for your luxury trip to Ethiopia</h2>
+      <h2 class="text-center"> {introSecData.luxuryTripTitle}</h2>
       <div class="row">
          <div class="content-col-1 col-xs-12 col-lg-7">
             <div class="component-content-text">
-               <p>Abex Travel creates bespoke luxury trips to Ethiopia. Our travel experts design your perfect itinerary, with the best accommodation, exclusive tours and a local guide who shares your interests, and we sort out all the detail.</p>
-               <p>Enjoy a warm welcome, relax and experience the true adventure of Latin America. Whatever you want your trip to include, at Abex Travel we’ll create a bespoke trip just for you. Choose experiences and activities in <Link to="/latin-america/peru/">Peru</Link>, <Link to="/latin-america/galapagos/">The Galapagos</Link>,&nbsp;<Link to="/latin-america/argentina/">Argentina</Link>, <Link to="/latin-america/chile/">Chile</Link>, <Link to="/latin-america/costa-rica/">Costa Rica</Link>, <Link to="/latin-america/belize/">Belize</Link>, <Link to="/latin-america/bolivia/">Bolivia</Link>, <Link to="/latin-america/brazil/">Brazil</Link>, <Link to="/latin-america/ecuador/">Ecuador</Link>, &nbsp;<Link to="/latin-america/mexico/">Mexico</Link>&nbsp;and <Link to="/latin-america/uruguay/">Uruguay</Link>.</p>
-               <p>If you have more time, why not try our <Link to="https://staging.jacadatravel.com/latin-america/grand-tours/">Grand Tours of Latin America</Link>, taking in more of the region in one incredible trip.</p>
+            <div dangerouslySetInnerHTML={{__html: introSecData.description}} />
             </div>
          </div>
          <div class="content-col-2 col-lg-offset-1 col-xs-12 col-md-12 col-lg-4">
@@ -36,7 +35,7 @@ return(
                         </div>
                      </div>
                      <div class="col-md-10">
-                        <p> Latin America is rich in diversity and contrast and possesses a special geography that sets it apart from other destinations on the planet. Itll charm you with an array of natural and cultural wonders - from snow-capped mountains, picture-perfect beaches and tropical rainforests to ancient civilisations. Once you visit you will want to explore this continent over and&nbsp;over.</p>
+                        <p>{introSecData.quote}</p>
                      </div>
                   </div>
                   <div class="team-quote-author team-quote-author--indent">

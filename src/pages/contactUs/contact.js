@@ -2,6 +2,7 @@ import react,{useState} from 'react';
 import RegistrationSection1 from '../destinations/registrationSection1';
 import RegistrationSection2 from '../destinations/registrationSection2';
 import { Link } from 'react-router-dom';
+import axiosInstance from "../../utils/axios";
 
 function ContactUs(){
    const [notCompleted,setNotCompleted]=useState({
@@ -50,13 +51,40 @@ function ContactUs(){
       }
       
    };
+   let destinationString='';
+   destinations.forEach(element => {
+      destinationString=+element;
+   });
+   const requestBody={
+      Destinations:destinationString,
+      number_of_passengers:state.number_of_passengers,
+      year:Number.parseInt(state.date_year_new),
+      month:Number.parseInt(state.date_month_new),
+      day:Number.parseInt(state.date_day_new),
+      details:state.details,
+      aspectss:state.aspectss,
+      currency:state.currency,
+      budget:state.budget,
+      name:state.client_name,
+      phone_number:Number.parseInt(state.client_phone_number),
+      email:state.client_email,
+   };
    const validate=()=>{
+      debugger;
       setNotCompleted((prevState)=>({
          ...prevState,
          formCompleted:true
       }));
       if(!notCompleted.number_of_passengers&&!notCompleted.details&&!notCompleted.PhoneNumber&&!notCompleted.Fullname&&!notCompleted.Email&&!notCompleted.consent_processing){
          console.log('data filled well');
+      }else{
+         axiosInstance.post('/contact-uses',requestBody)
+         .then((data)=>{
+debugger;
+         })
+         .catch((error)=>{
+debugger;
+         });
       }
    }
    const handleChecked=(e)=>{
