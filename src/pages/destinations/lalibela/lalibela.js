@@ -20,7 +20,7 @@ function Lalibela(){
         map:'',
         ataglance:''
     });
-    const [tripItineraryData,setTripItenaryData]=useState({});
+    const [tripItineraryId,setTripItenaryId]=useState();
     const data = useSelector((exampleTrip) => exampleTrip);
    let exampleTrip= data.exampleTrip[data.exampleTrip.length-1];
    useEffect(()=>{
@@ -39,14 +39,16 @@ function Lalibela(){
         ...prevState,
         map:exampleTrip.Map.url,
         ataglance:exampleTrip.Ataglance
-    }))
+    }));
+    setTripItenaryId(exampleTrip._id);
+
    },[]);
     return(
         <>
         <Carousel carouselData={carouselData}/>
         <Card cardData={cardData} />
         <ExampleTripMap exampleTripMapData={exampleTripMapData} />
-        <TripItinerary />
+        <TripItinerary tripItineraryId={tripItineraryId} />
         <Registration />
         
 </>

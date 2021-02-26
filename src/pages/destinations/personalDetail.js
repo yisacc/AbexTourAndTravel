@@ -2,7 +2,7 @@ import react, { useState } from 'react';
 
 
 const PersonalDetail=(props)=>{
-   const {handleValueChange,data,handleChecked,validate,notCompleted}=props;
+   const {handleValueChange,data,handleChecked,validate,notCompleted,loading}=props;
    
 const [show,setShow]=useState(false);
 const handleCodeChange=(event)=>{
@@ -1548,8 +1548,8 @@ return(
             <ul></ul>
          </div>
             
-            <p class="submit"> <input onClick={(e)=>validate(e)} type="submit" value="Start my Journey" class="wpcf7-form-control wpcf7-submit btn btn-dark-primary btn-lg" /><span class="ajax-loader"></span></p>
-            <div class="wpcf7-response-output" aria-hidden="true"></div>
+            <p class="submit"> <input onClick={(e)=>validate(e)} type="submit" value="Start my Journey" class="wpcf7-form-control wpcf7-submit btn btn-dark-primary btn-lg" />{loading?<span class="ajax-loader"><i class="fas fa-sync fa-spin"></i></span>:null}</p>
+         
          
       </div>
    </div>

@@ -1,5 +1,6 @@
 {
   "name": "abextour",
+  "homepage":"http://eastafricatourandtravel.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

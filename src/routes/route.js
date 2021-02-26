@@ -6,6 +6,7 @@ import Ethiopia from "../pages/countries/ethiopia/ethiopia";
 import ContactUs from "../pages/contactUs/contact";
 import OurStory from "../pages/about/ourStory/ourstory";
 import DanakilDepression from "../pages/destinations/danakilDepression/danakilDepression";
+import ThanksPage from "../pages/contactUs/thanks/thanks";
 
 
 function AbexTourRoute() {
@@ -15,9 +16,12 @@ function AbexTourRoute() {
     <Route exact path="/" component={HomePage} />
       <Route path="/destinations/ethiopia" component={Ethiopia} />
       <Route path="/destinations/lalibela" component={Lalibela} />
-      <Route path="/contact" component={ContactUs} />
+      <Route path="/contact/thanks" component={ThanksPage} />
+      <Route exact path="/contact" component={ContactUs} />
       <Route path="/our-story" component={OurStory} />
       <Route path="/danakil-depression" component={DanakilDepression} />
+      
+
       
     </>
   );

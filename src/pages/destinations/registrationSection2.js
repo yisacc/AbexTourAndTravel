@@ -2,7 +2,7 @@ import react from 'react';
 import PersonalDetail from './personalDetail';
 
 function RegistrationSection2(props){
-   const {handleValueChange,data,handleChecked,validate,notCompleted}=props;
+   const {handleValueChange,data,handleChecked,validate,notCompleted,loading}=props;
     return(
         <>
 
@@ -49,7 +49,7 @@ function RegistrationSection2(props){
       </div>
    </div>
 </div>
-                <PersonalDetail handleValueChange={handleValueChange} data={data} handleChecked={handleChecked} validate={validate} notCompleted={notCompleted} />
+                <PersonalDetail handleValueChange={handleValueChange} data={data} loading={loading} handleChecked={handleChecked} validate={validate} notCompleted={notCompleted} />
                  </div>
              </div>
         

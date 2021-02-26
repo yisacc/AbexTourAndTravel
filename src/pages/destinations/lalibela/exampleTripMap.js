@@ -1,6 +1,5 @@
 import react from 'react';
 import {MDBContainer} from 'mdbreact';
-import lalibelamap from '../../../images/maps/mapLalibela.PNG';
 
 const ExampleTripMap=(props)=>{
   const {exampleTripMapData}=props;
@@ -10,7 +9,7 @@ const ExampleTripMap=(props)=>{
         <div class="example-trip-map bg-grey row">
         <div class="map-wrapper col-xs-12 col-lg-6">
    <div class="map">
-   <img src={'http://localhost:1337'+exampleTripMapData.map}></img>
+   <img src={exampleTripMapData.map}></img>
    </div>
       </div>
       <div class="col-xs-12 col-lg-6 col-lg-offset-6">

@@ -137,7 +137,8 @@ const setShow=(e)=>{
           </MDBNavbarNav>
           <MDBNavbarNav right>
             <MDBNavItem>
-            <MDBBtn className="abex-tour-primary-btn"> <Link to="/contact">Contact Us</Link></MDBBtn>
+            <Link to="/contact">
+            <MDBBtn className="abex-tour-primary-btn"> Contact Us</MDBBtn></Link>
             
             </MDBNavItem>
 

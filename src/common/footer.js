@@ -8,7 +8,7 @@ const FooterPage = () => {
       <MDBContainer fluid className="text-center text-md-left abex-tour-container">
         <MDBRow>
           <MDBCol md="6">
-            <h5 class="footer-subtitle">Abex Tour</h5>
+            <h5 class="footer-subtitle">East Africa Tour And Travel</h5>
             <div class="footer-subtitle">Contact</div>
             <ul>
               <li className="list-unstyled abex-tour-footer-link">
@@ -39,14 +39,10 @@ const FooterPage = () => {
           </MDBCol>
           
           <MDBCol md="3">
-            <h5 className="abex-tour-footer-subtitle">CONTACT</h5>
-            
-          </MDBCol>
-          <MDBCol md="3">
             <h5 className="abex-tour-footer-subtitle">DESTINATIONS</h5>
             <ul>
               <li className="list-unstyled abex-tour-footer-link">
-                <Link to="#!">Ethiopia</Link>
+                <Link to="/destinations/ethiopia">Ethiopia</Link>
               </li>
               <li className="list-unstyled abex-tour-footer-link">
                 <Link to="#!">Kenya</Link>
@@ -71,11 +67,23 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
+          <MDBCol md="3">
+            <h5 className="abex-tour-footer-subtitle">About</h5>
+            <ul>
+              <li className="list-unstyled abex-tour-footer-link">
+                <Link to="/our-story!">Our Story</Link>
+              </li>
+              <li className="list-unstyled abex-tour-footer-link">
+                <Link to="#!">What We Do?</Link>
+              </li>
+            
+            </ul>
+          </MDBCol>
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <Link to="https://www.abextour.com"> abextour.com </Link>
+          &copy; {new Date().getFullYear()} Copyright: <Link to="http://eastafricatourandtravel.com"> eastafricatourandtravel.com </Link>
         </MDBContainer>
       </div>
     </MDBFooter>

@@ -26,9 +26,9 @@ return(
       <MDBContainer className="abex-tour-container" fluid>
             <div class="row">
                <div class="content col-xs-12 col-lg-8 col-lg-offset-2">
-                  <p><span style={{"font-weight": "400"}}>Abex Tour was founded in 2008 by Alex Malcolm, who wanted to show people the side of a country that not everyone gets to see. &nbsp;While working in Brazil, he was lucky enough to travel the country with local friends who took him to places and shared things he would never have experienced on his own. He felt there was a space to create these unique travel experiences with a personal, human touch for others – and flew back to the UK to start his own company. Though we started out just selling trips to Brazil, Jacada now sells trips around the world; and despite our growth, Alex’s vision still remains. Personal is how we began, and that’s how we continue to be. </span></p>
-                  <p><span style={{"font-weight": "400"}}>In 2020, The Jacada brand joined the family of Wilderness Safaris, a strong and reputable organisation, which for nearly 40 years has offered luxury travel experiences, composed around the commitment to conserve wilderness and wildlife.</span></p>
-                  <p><span style={{"font-weight": "400"}}>Wilderness has provided the resources for the Jacada brand to continue creating bespoke travel experiences across the planet for discerning, curious travellers like you.</span></p>
+                  <p><span style={{"font-weight": "400"}}>East Africa Tour And Travel is a tour operator officially emerged Ethiopian Toursim Buisness in early December, 2018. We have efficient, unflagging, trusted and Multilingual Young Guides that can make the tour catchy form the start to end.  </span></p>
+                  <p><span style={{"font-weight": "400"}}>We invite you to browse from the exiting tours and get inspired the incridlbe nature of Ethiopia. We have arranged different itineraries in different route pick what you are interested and enjoy the reasonable offers. </span></p>
+                  <p><span style={{"font-weight": "400"}}>Ultimately, our optimistic and knowledgeable Guides are awaits you to assist with an honour of you and our Historic Nation. </span></p>
                </div>
             </div>
          </MDBContainer>
@@ -78,8 +78,8 @@ return(
          <div class="col-xs-12 col-md-5">
             <div class="wrapper double">
                <h3></h3>
-               <p>A portion of our revenue will go towards supporting the considerable conservation and rural economic development efforts of Wilderness Safaris who currently help to protect over 2.3 Million hectares of land.</p>
-               <div class="button-container"> <Link class="btn btn-primary" to="https://www.jacadatravel.com/what-we-do/"> More about what we do </Link></div>
+               <p>These are just a couple of the ways that we are committed to making the world a better place through travel as well as upholding our commitment to follow a low-impact tourism model. There are other ways we work to make travel uplifting, and you can find out more&nbsp;</p>
+
             </div>
          </div>
          <div class="col-xs-12 col-md-6 col-md-offset-1">
@@ -92,25 +92,7 @@ return(
       </div>
    </div>
 </div>
-<div class="container-wrap double">
-   <div class="container">
-      <div class="row row-flex v-align-flex">
-         <div class="col-xs-12 col-md-5 col-md-push-7">
-            <div class="wrapper double">
-               <h3></h3>
-               <p>These are just a couple of the ways that we are committed to making the world a better place through travel as well as upholding our commitment to follow a low-impact tourism model. There are other ways we work to make travel uplifting, and you can find out more&nbsp;<Link to="https://www.jacadatravel.com/responsible-travel/">here</Link>.</p>
-            </div>
-         </div>
-         <div class="col-xs-12 col-md-6 col-md-pull-5">
-            <div class="image">
-               <picture>
-                  <img src="https://www.jacadatravel.com/wp-content/uploads/fly-images/242596/Mwiba-Reserve-2-525x295-cc.jpg" alt="tanzania-expeditions-mwiba-reserve" class=" lazyloaded" ></img>
-               </picture>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
+
 </div>
    </section>
     </>

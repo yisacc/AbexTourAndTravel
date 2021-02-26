@@ -3,8 +3,11 @@ import RegistrationSection1 from '../destinations/registrationSection1';
 import RegistrationSection2 from '../destinations/registrationSection2';
 import { Link } from 'react-router-dom';
 import axiosInstance from "../../utils/axios";
+import { useHistory } from 'react-router-dom';
 
 function ContactUs(){
+   let history = useHistory();
+   const [loading,setLoading]=useState(false);
    const [notCompleted,setNotCompleted]=useState({
       number_of_passengers:true,
       details:true,
@@ -51,6 +54,7 @@ function ContactUs(){
       }
       
    };
+
    let destinationString='';
    destinations.forEach(element => {
       destinationString=+element;
@@ -66,23 +70,28 @@ function ContactUs(){
       currency:state.currency,
       budget:state.budget,
       name:state.client_name,
-      phone_number:Number.parseInt(state.client_phone_number),
+      phone_number:state.client_phone_number,
       email:state.client_email,
    };
    const validate=()=>{
       debugger;
+      setLoading(true);
       setNotCompleted((prevState)=>({
          ...prevState,
          formCompleted:true
       }));
-      if(!notCompleted.number_of_passengers&&!notCompleted.details&&!notCompleted.PhoneNumber&&!notCompleted.Fullname&&!notCompleted.Email&&!notCompleted.consent_processing){
+      if(notCompleted.number_of_passengers||notCompleted.details||notCompleted.PhoneNumber||notCompleted.Fullname||notCompleted.Email||notCompleted.consent_processing){
          console.log('data filled well');
+         setLoading(false);
       }else{
+         console.log(JSON.stringify(requestBody));
          axiosInstance.post('/contact-uses',requestBody)
          .then((data)=>{
-debugger;
+            history.push('/contact/thanks');
+            setLoading(false);
          })
          .catch((error)=>{
+            setLoading(false);
 debugger;
          });
       }
@@ -92,6 +101,10 @@ debugger;
          ...prevState,
          consent_processing: !state.consent_processing,
        }));
+       setNotCompleted((prevState)=>({
+          ...prevState,
+          consent_processing:!notCompleted.consent_processing,
+       }))
    }
    const AddDestination=()=>{
        setDestinations([...destinations,destination]);
@@ -136,7 +149,7 @@ return(
             <div class="col-lg-8">
 <RegistrationSection1 destinations={destinations} AddDestination={AddDestination} handleChange={handleChange} destination={destination} removeItem={removeItem} handleValueChange={handleValueChange} data={state} notCompleted={notCompleted} />
 <div class="mt-4">
-<RegistrationSection2 handleValueChange={handleValueChange} data={state} handleChecked={handleChecked} validate={validate} notCompleted={notCompleted} />
+<RegistrationSection2 handleValueChange={handleValueChange} data={state} loading={loading} handleChecked={handleChecked} validate={validate} notCompleted={notCompleted} />
 </div>
 
             </div>

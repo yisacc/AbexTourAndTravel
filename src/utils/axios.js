@@ -1,5 +1,6 @@
 import axios from 'axios';
-const baseURL="http://localhost:1337/";
+const baseURL="https://eastafricatourbackend.herokuapp.com/";
+// const baseURL="http://localhost:1337";
 const axiosInstance=axios.create({
     baseURL:baseURL,
 });
@@ -12,7 +13,9 @@ axiosInstance.interceptors.response.use(
         resolve(response);
     }),
     (error)=>{
-        console.log(error);
+        return new Promise((resolve,reject)=>{
+            reject(error);
+        })
     });
 
     export default axiosInstance;

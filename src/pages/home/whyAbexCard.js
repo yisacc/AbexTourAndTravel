@@ -4,7 +4,7 @@ import { MDBBtn, MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,MDBContainer, M
 const CardExample = () => {
   return (
     <MDBContainer className="abex-tour-container padded-section" fluid>
-        <h1 className="underlined text-center">Why book with Abex Tour?</h1>
+        <h1 className="underlined text-center">Why book with East Africa Tour And Travel?</h1>
         <MDBRow>
       <MDBCard className="why-abex-card col-md-3">
         

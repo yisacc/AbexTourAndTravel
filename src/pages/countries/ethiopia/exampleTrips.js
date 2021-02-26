@@ -26,9 +26,9 @@ return(
     <MDBCardGroup className="mb-5">
       {
         exampleTripsData.example_trips.map(element => (
-          
-          <MDBCard className="mr-4">
-          <MDBCardImage src={'http://localhost:1337'+element.cardImage.url} alt="MDBCard image cap" top hover
+          <div class="col-4">
+          <MDBCard className="mb-4">
+          <MDBCardImage src={element.cardImage.url} alt="MDBCard image cap" top hover
             overlay="white-slight" />
           <MDBCardBody className="packages-card-body">
             <MDBCardTitle className="travel-packages-title" tag="h5"> {element.TripName}</MDBCardTitle>
@@ -42,6 +42,7 @@ return(
             <div class="card-button t-tag t-tag--black"><Link onClick={()=>handleClick(element._id)} class="t-tag">EXPLORE THIS TRIP</Link></div>
           </MDBCardBody>
         </MDBCard>
+        </div>
   
         ))
       }

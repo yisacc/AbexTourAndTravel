@@ -32,7 +32,7 @@ const CarouselPage = (props) => {
           <MDBView>
             <img
               className="d-block w-100"
-              src={'http://localhost:1337'+element.url}
+              src={element.url}
               alt="First slide"
             />
             {show?<MDBMask overlay="black-light" />:null}

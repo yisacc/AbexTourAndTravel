@@ -21,7 +21,7 @@ bannerText:''
         example_trips:[]
     });
     useEffect(() => {
-    axiosInstance.get('countries/1')
+    axiosInstance.get('countries/603606f38b6fbf5d881c5685')
     .then((todo) => {
         setCarouselData((prevState) => ({
             ...prevState,
